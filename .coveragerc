@@ -2,3 +2,4 @@
 show_missing=True
 fail_under=100
 omit=helloworld/wsgi.py
+     helloworld/tests/*
