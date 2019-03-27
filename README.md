@@ -12,8 +12,8 @@ A simple Python 3 Flask app with code to run the app in a container in minikube 
 
 ### Installation
 
-To install the project locally you need to run ``make install``. You can also pass ``VENV``,
-``PYTHON_EXE`` and ``ANSIBLE_VERSION`` keyword arguments to the make file to configure the installation e.g
+To install the project locally you need to run ``make install``. You can also pass ``VENV`` and ``PYTHON_EXE`` keyword arguments
+to the make file to configure the installation e.g
 
 * ``make install`` - Installs dependencies with defaults
 * ``make install VENV=foo`` - Installs into a virtualenv named ``foo``
