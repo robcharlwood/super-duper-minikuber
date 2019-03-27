@@ -1,5 +1,7 @@
 # Super Duper Minikuber
 
+[![Build Status](https://travis-ci.com/robcharlwood/super-duper-minikuber.svg?branch=master)](https://travis-ci.com/robcharlwood/super-duper-minikuber/) [![Coverage Status](https://coveralls.io/repos/github/robcharlwood/super-duper-minikuber/badge.svg?branch=master)](https://coveralls.io/github/robcharlwood/super-duper-minikuber?branch=master)
+
 A simple Python 3 Flask app with code to run the app in a container in minikube with load balancing
 
 ## Initial checkout and setup of codeabase
