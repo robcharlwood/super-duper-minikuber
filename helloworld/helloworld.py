@@ -2,6 +2,7 @@ import os
 from flask import Flask
 
 application = Flask(__name__)
+application.config['DEBUG'] = False
 
 
 @application.route("/")
