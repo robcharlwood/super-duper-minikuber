@@ -6,7 +6,7 @@ python:
 
 install:
   - pip install coveralls
-  - make install
+  - make install PYTHON_EXE=python
 
 script:
   - make test
