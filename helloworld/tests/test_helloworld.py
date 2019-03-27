@@ -25,3 +25,10 @@ def test_home_200_pod_ip_availabe(client):
     home = client.get('/')
     assert b'Hello World!' in home.data
     assert b'127.0.0.1' in home.data
+
+
+def test_health_200(client):
+    """Test health page returns a 200
+    """
+    health = client.get('/health')
+    assert b'200 OK!' in health.data
