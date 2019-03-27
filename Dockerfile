@@ -4,10 +4,9 @@ LABEL maintainer="rob@bitniftee.com"
 # allow user and source root to be passed as args. Default to sensibles
 ARG app_user=superduperminikuber
 ARG project_root=/app/
-ARG app_root=${project_root}helloworld
 
 # create app dir and non root user
-RUN mkdir -p ${app_root} && \
+RUN mkdir -p ${project_root} && \
     addgroup -g 1001 ${app_user} && \
     adduser -u 1001 -D ${app_user} -G ${app_user} && \
     chown -R ${app_user}:${app_user} ${project_root}
