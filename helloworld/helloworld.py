@@ -12,6 +12,10 @@ def hello():
     )
 
 
-if __name__ == "__main__":
+@application.route("/health")
+def health():
+    return "200 OK!"
+
+
 if __name__ == "__main__":  # pragma: no cover
     application.run(host='0.0.0.0')
