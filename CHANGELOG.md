@@ -15,3 +15,8 @@ Types of changes are:
 * **Security** in case of vulnerabilities.
 
 ## Unreleased
+
+## Added
+
+* [Ticket #1](https://github.com/robcharlwood/super-duper-minikuber/issues/1): Create Dockerfile
+* [Ticket #2](https://github.com/robcharlwood/super-duper-minikuber/issues/2): Create setup script with virtualenv and ansible installed (Python 3)
