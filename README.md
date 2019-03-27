@@ -24,6 +24,18 @@ To install the project locally you need to run ``make install``. You can also pa
 To run the tests for the project locally you need to run ``make test``. This will run pytest with coverage.
 Please note that if you have not followed the previous Installation steps above and run ``make install``, this will not work.
 
+### Continuous Integration
+
+This project uses [Travis CI](http://travis-ci.org/) for continuous integration. This platform runs the project tests and test coverage.
+Coverage is handled with Python's coverage library, but also uses the SaaS service [coveralls.io](https://coveralls.io) for visibility on coverage.
+
+## Project Docker Hub Builds
+
+To build the image that will be deployed to our minikube instance, we use [Docker Hub's](https://hub.docker.com/r/robcharlwood/super-duper-minikuber)
+GitHub integration. This integration allows Docker Hub to automatically detect changes to the project's ``Dockerfile`` and build and tag relevant
+versions of the build to store in their registry. Obviously for private projects images would not be hosted on a public docker hub, but for this
+open source project it will be fine.
+
 ## Versioning
 
 This project uses [git](https://git-scm.com/) for versioning. For the available versions,
