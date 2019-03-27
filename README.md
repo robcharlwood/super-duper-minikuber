@@ -16,7 +16,6 @@ To install the project locally you need to run ``make install``. You can also pa
 * ``make install`` - Installs dependencies with defaults
 * ``make install VENV=foo`` - Installs into a virtualenv named ``foo``
 * ``make install PYTHON_EXE=python3.7`` - Installs with a specific python interpreter, example values might be ``python`` or ``python3.6``.
-* ``make install ANSIBLE_VERSION=2.7.5`` - Installs with ansible version 2.7.5
 
 ## Versioning
 
