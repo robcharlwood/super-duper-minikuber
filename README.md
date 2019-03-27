@@ -19,6 +19,8 @@ to the make file to configure the installation e.g
 * ``make install VENV=foo`` - Installs into a virtualenv named ``foo``
 * ``make install PYTHON_EXE=python3.7`` - Installs with a specific python interpreter, example values might be ``python`` or ``python3.6``.
 
+Please ensure that you have ``kubectl`` and ``minikube`` installed on your system and that they are both on the system path.
+
 ### Running tests
 
 To run the tests for the project locally you need to run ``make test``. This will run pytest with coverage.
