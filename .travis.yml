@@ -2,14 +2,15 @@
 language: python
 
 python:
-  - "3.7"
+  - "3.6"
 
 install:
   - pip install coveralls
-  - make install
+  - pip install -r requirements-dev.txt
 
 script:
-  - make test
+  - find . -type f -name '*.pyc' -delete
+  - pytest -s --cov=./helloworld --no-cov-on-fail --cov-config=.coveragerc ./helloworld
 
 after_success:
   - coveralls
