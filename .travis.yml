@@ -6,13 +6,11 @@ python:
 
 install:
   - pip install coveralls
-  - python -m venv .superduperminikuber
-  - .superduperminikuber/bin/pip install --upgrade pip
-  - .superduperminikuber/bin/pip install -r requirements-dev.txt
+  - pip install -r requirements-dev.txt
 
 script:
   - find . -type f -name '*.pyc' -delete
-  - .superduperminikuber/bin/pytest -s --cov=./helloworld --no-cov-on-fail --cov-config=.coveragerc ./helloworld
+  - pytest -s --cov=./helloworld --no-cov-on-fail --cov-config=.coveragerc ./helloworld
 
 after_success:
   - coveralls
