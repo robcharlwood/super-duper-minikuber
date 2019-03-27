@@ -19,6 +19,11 @@ To install the project locally you need to run ``make install``. You can also pa
 * ``make install VENV=foo`` - Installs into a virtualenv named ``foo``
 * ``make install PYTHON_EXE=python3.7`` - Installs with a specific python interpreter, example values might be ``python`` or ``python3.6``.
 
+### Running tests
+
+To run the tests for the project locally you need to run ``make test``. This will run pytest with coverage.
+Please note that if you have not followed the previous Installation steps above and run ``make install``, this will not work.
+
 ## Versioning
 
 This project uses [git](https://git-scm.com/) for versioning. For the available versions,
