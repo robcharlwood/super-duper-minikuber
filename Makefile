@@ -43,14 +43,14 @@ setup_minikube: check_minikube
 
 install: setup_venv setup_minikube
 
-test:
+test: check_python
 	find . -type f -name '*.pyc' -delete
 	${VENV}/bin/pytest -s --cov=./helloworld --no-cov-on-fail --cov-config=.coveragerc ./helloworld
 
 run_ansible: check_kubectl
 	${VENV}/bin/ansible-playbook -i inventory.cfg helloworld.yml
 
-clean:
+clean: check_minikube check_python
 	minikube stop
 	minikube delete
 	rm -rf ${VENV}
