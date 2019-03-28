@@ -6,11 +6,11 @@ python:
 
 install:
   - pip install coveralls
-  - pip install -r requirements-dev.txt
+  - make setup_ven PYTHON_EXE=python
 
 script:
   - find . -type f -name '*.pyc' -delete
-  - pytest -s --cov=./helloworld --no-cov-on-fail --cov-config=.coveragerc ./helloworld
+  - make test
 
 after_success:
   - coveralls
