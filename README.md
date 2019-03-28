@@ -4,7 +4,7 @@
 
 A simple Python 3 Flask app with code to run the app in a container in minikube with load balancing
 
-## Initial checkout and setup of codeabase
+## Initial checkout and setup of codebase
 
 * Open terminal and move to a suitable directory on your machine
 * Run ``git clone git@github.com:robcharlwood/super-duper-minikuber.git``
