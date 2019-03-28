@@ -21,6 +21,34 @@ to the make file to configure the installation e.g
 
 Please ensure that you have ``kubectl`` and ``minikube`` installed on your system and that they are both on the system path.
 
+### Deploying the app to minikube
+
+Once the steps above have been run, you should have a virtualenv setup with ansible and test dependencies installed. Your local
+instance of ``minikube`` will have also been, cleaned, reset and started ready to accept our deployment. The next step is to run
+our make command which will execute ansible to run configuration management on the cluster. This includes installing our kubernetes namespace and our
+kubernetes deployment and service. Again for real production projects, you would be better of installing your app using something like Helm Tiller
+with TLS enabled. Then you would just use ansible to configure RBAC, role bindings, cluster role bindings etc and then run Helm Tiller.
+However, to keep this example simple, we are just going to use ansible to do everything. So let's crack on and run the commands below.
+
+* ``make run_ansible``
+
+Once that is complete, we'll check out setup with a few quick commands
+* ``kubectl get ns`` - shows our new namespace
+* ``kubectl get pods -n superduperminikuber`` - shows our helloworld app pods
+* ``kubectl get services -n superduperminikuber`` - shows our load balancing service
+
+Once all of our pods are ready, our deployment is complete. You can check for the deployment being ready using the command below:
+
+    kubectl get deployments -n superduperminikuber
+
+Once this command shows ``4`` under the ``AVAILABLE`` column, we are ready to view our deployed app. To see our app running under
+our load balancer enter the below command in to your terminal. This will cause a new browser window to open and our app to load.
+
+    minikube service helloworld --namespace superduperminikuber
+
+You should now see the hello world homepage along with the current pod's IP, name and namespace. If you refresh this page over and over,
+you will see the IP address of the POD change showing the load balancer in action.
+
 ### Running tests
 
 To run the tests for the project locally you need to run ``make test``. This will run pytest with coverage.
