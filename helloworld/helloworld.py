@@ -7,8 +7,14 @@ application.config['DEBUG'] = False
 
 @application.route("/")
 def hello():
-    return "<h1>Hello World!</h1><p>Load balanced pod: {}</p>".format(
-        os.getenv("POD_IP", "Not Available")
+    return "\
+        <h1>Hello World!</h1>\
+        <ul><li>Load balanced pod IP: {}</li>\
+        <li>Load balanced pod name: {}</li>\
+        <li>Load balanced pod namespace: {}</li></ul>".format(
+        os.getenv("POD_IP", "Not Available"),
+        os.getenv("POD_NAME", "Not Available"),
+        os.getenv("POD_NAMESPACE", "Not Available")
     )
 
 
