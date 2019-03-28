@@ -47,7 +47,8 @@ test: check_python
 	find . -type f -name '*.pyc' -delete
 	${VENV}/bin/pytest -s --cov=./helloworld --no-cov-on-fail --cov-config=.coveragerc ./helloworld
 
-run_ansible: check_kubectl
+run_ansible: check_kubectl check_minikube
+	minikube start
 	${VENV}/bin/ansible-playbook -i inventory.cfg helloworld.yml
 
 clean: check_minikube check_python
