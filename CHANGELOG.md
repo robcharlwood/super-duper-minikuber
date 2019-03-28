@@ -16,6 +16,8 @@ Types of changes are:
 
 ## Unreleased
 
+## v1.0.0 - 2019-03-28
+
 ## Added
 
 * [Ticket #1](https://github.com/robcharlwood/super-duper-minikuber/issues/1): Create Dockerfile
