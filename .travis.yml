@@ -6,7 +6,7 @@ python:
 
 install:
   - pip install coveralls
-  - make setup_ven PYTHON_EXE=python
+  - make setup_venv PYTHON_EXE=python
 
 script:
   - find . -type f -name '*.pyc' -delete
