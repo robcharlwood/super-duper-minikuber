@@ -26,7 +26,7 @@ Please ensure that you have ``kubectl`` and ``minikube`` installed on your syste
 Once the steps above have been run, you should have a virtualenv setup with ansible and test dependencies installed. Your local
 instance of ``minikube`` will have also been, cleaned, reset and started ready to accept our deployment. The next step is to run
 our make command which will execute ansible to run configuration management on the cluster. This includes installing our kubernetes namespace and our
-kubernetes deployment and service. Again for real production projects, you would be better of installing your app using something like Helm Tiller
+kubernetes deployment and service. Again for real production projects, you would be better off installing your app using something like Helm Tiller
 with TLS enabled. Then you would just use ansible to configure RBAC, role bindings, cluster role bindings etc and then run Helm Tiller.
 However, to keep this example simple, we are just going to use ansible to do everything. So let's crack on and run the commands below.
 
