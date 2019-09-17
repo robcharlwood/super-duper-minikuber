@@ -1,4 +1,4 @@
-FROM python:3.7.2-alpine3.9
+FROM python:3.7.3-alpine3.10
 LABEL maintainer="rob@bitniftee.com"
 
 # allow user and source root to be passed as args. Default to sensibles
